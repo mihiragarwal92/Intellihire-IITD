@@ -2,6 +2,7 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 **1. Introduction**
 
 Overview: The Intellihire Employment Management Software is an innovative solution designed to revolutionize the hiring process by leveraging advanced AI and machine learning technologies.
@@ -42,7 +43,7 @@ Scope: This documentation covers the software's features, user guides, technical
 >Save a job post or apply for jobs directly with a single click.
 >See status of your applications.
 
-
+![Alt text](carousel-1.jpg)
 
 This is a high-level overview of the system architecture. The actual architecture may involve more details and considerations based on the specific technologies and platforms used in the implementation of the Intellihire Employment Management Software.
 **4. User Guide**
@@ -83,6 +84,8 @@ This documentation is designed to guide users, administrators, and developers th
 For further inquiries, assistance, or feedback, please contact our support team at [mihiragarwal15@gmail.com][rajsahu012002@gmail.com].
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![Altextt ](https://github.com/mihiragarwal92/Intellihire-IITD/blob/main/landing%20main.png?raw=true)    
+![Altextt ](https://github.com/mihiragarwal92/Intellihire-IITD/blob/main/signup.png) 
 
 # Job Portal
 Django Job Portal.       
@@ -131,13 +134,13 @@ python manage.py runserver
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Main directory file
+# Main directory file
 
-	`jobs`
-    * `urls.py` - path reference to the app URLs
-    * default django project files, such as: `settings.py`, `wsgi.py`, `asgi.py` etc.
+*   `jobs`
+ * `urls.py` - path reference to the app URLs
+ * default django project files, such as: `settings.py`, `wsgi.py`, `asgi.py` etc.
 		* `jobsapp` - app directory
-		* `Personality` - app directory
+		*  `Personality` - app directory
 		* `Recognition` - app directory
 		* `Accounts` - app directory
 
@@ -150,13 +153,14 @@ python manage.py runserver
   * `README.md` - this readme file
 
 ## for Quiz app
-cd Quiz
+* cd Quiz
 perform same steps for Quiz app
-*Create a Virtual Environment and install Dependencies.
-*Create a new Virtual Environment for the project and activate it.
-*install requirements.
-*migrate the databse
-*python manage.py runserver
+* Create a Virtual Environment and install Dependencies.
+* Create a new Virtual Environment for the project and activate it.
+* install requirements.
+* migrate the databse
+** python manage.py runserver
+![Altextt ](https://github.com/mihiragarwal92/Intellihire-IITD/blob/main/Landing%20page.png)    
 
 *This Project is prepared by TEAM JSS (Mihir Agarwal,Raj Sahu) under the supervision of Prof. Jyoti Kumar and Prof. Greeshma Sharma (Design Dept-IITD). We're extremely grateful to the mentors to gave us this opportunity to intern for this project that motivated us to learn and grow more. We've put our sincerest efforts while building this project from scratch.*
 
