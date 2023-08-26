@@ -116,7 +116,7 @@ Set the database from settings.py
 python manage.py makemigrations
 python manage.py migrate
 ```
-#create superuser in Django
+create superuser in Django
 python manage.py createsuperuser(create admin panel username and password)
 Current (email -admin12@gmail.com ,password-12345)
 
@@ -130,16 +130,8 @@ python manage.py collectstatic
 python manage.py runserver
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# for Quiz app
-cd Quiz
-perform same steps for Quiz app
-->Create a Virtual Environment and install Dependencies.
-->Create a new Virtual Environment for the project and activate it.
-->install requirements.
-->migrate the databse
-->python manage.py runserver
 
-### directory file
+## Main directory file
 
 	`jobs`
     * `urls.py` - path reference to the app URLs
@@ -156,6 +148,15 @@ perform same steps for Quiz app
    
   * `manage.py` - default django file
   * `README.md` - this readme file
+
+## for Quiz app
+cd Quiz
+perform same steps for Quiz app
+*Create a Virtual Environment and install Dependencies.
+*Create a new Virtual Environment for the project and activate it.
+*install requirements.
+*migrate the databse
+*python manage.py runserver
 
 *This Project is prepared by TEAM JSS (Mihir Agarwal,Raj Sahu) under the supervision of Prof. Jyoti Kumar and Prof. Greeshma Sharma (Design Dept-IITD). We're extremely grateful to the mentors to gave us this opportunity to intern for this project that motivated us to learn and grow more. We've put our sincerest efforts while building this project from scratch.*
 
