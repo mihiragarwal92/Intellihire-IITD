@@ -1,0 +1,135 @@
+{% extends "quizmaker/layout.html" %}
+{% load static %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+
+        <div>
+            <h4 id="title" class="d-block text-center">
+            </h4>
+        </div>
+
+        <div class="container-fluid content-row justify-content-center"> 
+            <div id="quizzes" class="row">
+            </div>
+        </div>
+
+        <div id="take-quiz" class="text-center">
+        </div>
+
+        <div id="scores" class="">
+            <div id="scores-category">
+                <div class="form-group">
+                    Choose the scores to display:
+                    <select name="category" class="form-control" id="scores-category-choice">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="own">Your top scores</option>
+                        <option value="all">All top scores</option>
+                        <option value="quiz">Specific quiz top scores</option>
+                    </select>
+                </div>
+            </div>
+            <div id="scores-quiz">
+                <div class="form-group">
+                    Choose the quiz to display:
+                    <select name="quiz" class="form-control" id="scores-quiz-choice">
+                    </select>
+                </div>
+            </div>
+            <div>
+                <ol id="scores-result">
+                </ol>
+                <div id="scores-no-result">
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-dashboard">
+            <div id="quiz-info">
+            </div>
+            <div id="questions-info">
+            </div>
+            <div id="add-question">
+                <form id="question-type-form">
+                    <input id="question-form-quizId" class="d-none"></input>
+                    <div class="form-group">
+                        Chose type of question:
+                        <select name="type" class="form-control" id="question-form-type">
+                            <option value="type_answer">Type Answer</option>
+                            <option value="multi_choice">Multiple Choice</option>
+                            <option value="true_or_false">Yes or No</option>
+                        </select>
+                    </div>
+                </form>
+                <form id="question-form">
+                    <div class="form-group">
+                        <span id="statement">Question:</span>
+                        <input id="question-form-text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        Image (optional): <input id="question-form-image" class="form-control">
+                    </div>
+
+                    <!-- if Type Answer & Multiple Choice Question -->
+                    <div id="ta-form">
+                        <div class="form-group">
+                            Right answer: <input id="question-form-answer" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- if Multiple Choice Question -->
+                    <div id="mc-form">
+                        <div class="form-group">
+                            Wrong answer: <input id="question-form-wrong1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            Wrong answer: <input id="question-form-wrong2" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            Wrong answer: <input id="question-form-wrong3" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- if True of False Question -->
+                    <div id="tf-form">
+                        <div class="form-group">
+                            Is the statement Yes or No:<br>
+                            <input type="radio" id="question-form-true" name="question-form-TorF" value="true">
+                            <label for="true">Yes</label>
+                            <input type="radio" id="question-form-false" name="question-form-TorF" value="false">
+                            <label for="false">No</label>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn btn-light d-inline" value="Save"/>
+                </form>
+            </div>
+        </div>
+
+        <div id="add-quiz">
+            <form id="quiz-form">
+                <div class="form-group">
+                    Title: <input id="quiz-form-title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    Description: <textarea class="form-control" id="quiz-form-description"></textarea>
+                </div>
+                <div class="form-group">
+                    Quiz visibility:<br>
+                    <input type="radio" id="quiz-form-public" name="visibility" value="public" required>
+                    <label for="public">public</label>
+                    <input type="radio" id="quiz-form-private" name="visibility" value="private" required>
+                    <label for="private">private</label>
+                </div>
+                <input type="submit" class="btn btn-light d-inline"/>
+            </form>
+        </div>
+    {% else %}
+        Please log in to see the quizzes.
+    {% endif %}
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'quizmaker/quizmaker.js' %}"></script>
+{% endblock %}
